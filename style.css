@@ -675,3 +675,9 @@ details[open] > summary .plus::after{transform:rotate(0)}
 .program__art::after{content:"";position:absolute;inset:0 4%;border-radius:50%;border:1.5px dashed rgba(123,109,255,.28);animation:spin 50s linear infinite}
 .program__art .program__img{position:relative;z-index:1;width:88%;justify-self:center}
 @media (max-width:900px){.program__art{width:min(360px,100%);justify-self:center;margin-top:8px}.program__art .program__img{width:88%}}
+
+/* старая цена */
+.price__row{display:flex;align-items:center;gap:12px;margin-top:6px}
+.price__old{font-size:22px;font-weight:700;color:#a9a3d6;text-decoration:none;position:relative}
+.price__old::after{content:"";position:absolute;left:-3px;right:-3px;top:52%;height:2.5px;background:#ff5a6e;transform:rotate(-8deg);border-radius:2px}
+.price__off{padding:4px 10px;border-radius:8px;background:#e8344f;color:#fff;font-weight:800;font-size:14px}
