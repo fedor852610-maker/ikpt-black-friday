@@ -23,21 +23,21 @@
   const vt = $('#videoTrack');
   if (vt) vt.innerHTML = VIDEOS.map(([n], i) => `
     <div class="slide">${noEmbed ? `<a class="card vcard" href="https://vimeo.com/${VIDEOS[i][1]}" target="_blank" rel="noopener">` : `<button class="card vcard" data-video="${i}">`}
-      <span class="vcard__ph"><img src="${I(`img/video-${i + 1}.webp`)}" alt="${n}" loading="lazy"><span class="play"></span></span>
+      <span class="vcard__ph"><img src="${I(`img/video-${i + 1}.webp?v=202611180556`)}" alt="${n}" loading="lazy"><span class="play"></span></span>
       <span class="vcard__t"><b>${n}</b><span>${noEmbed ? 'Смотреть на Vimeo' : 'Отзыв об обучении'}</span></span>
     ${noEmbed ? '</a>' : '</button>'}</div>`).join('');
 
   /* ---------- галереи документов ---------- */
-  const range = (p, n, cap) => Array.from({ length: n }, (_, i) => ({ src: I(`img/${p}-${i + 1}.webp`), cap: `${cap}, стр. ${i + 1} из ${n}` }));
+  const range = (p, n, cap) => Array.from({ length: n }, (_, i) => ({ src: I(`img/${p}-${i + 1}.webp?v=202611180556`), cap: `${cap}, стр. ${i + 1} из ${n}` }));
   const GALLERIES = {
     diploma: [
-      { src: I('img/diploma-sample.webp'), cap: 'Образец диплома о профессиональной переподготовке' },
-      { src: I('img/diploma-cover.webp'), cap: 'Обложка диплома' },
-      { src: I('img/certificate.webp'), cap: 'Образец сертификата о прохождении программы' }
+      { src: I('img/diploma-sample.webp?v=8fa4e74c'), cap: 'Образец диплома о профессиональной переподготовке' },
+      { src: I('img/diploma-cover.webp?v=439d836b'), cap: 'Обложка диплома' },
+      { src: I('img/certificate.webp?v=3650d52e'), cap: 'Образец сертификата о прохождении программы' }
     ],
     certificate: [
-      { src: I('img/certificate.webp'), cap: 'Образец сертификата о прохождении программы' },
-      { src: I('img/diploma-sample.webp'), cap: 'Образец диплома о профессиональной переподготовке' }
+      { src: I('img/certificate.webp?v=3650d52e'), cap: 'Образец сертификата о прохождении программы' },
+      { src: I('img/diploma-sample.webp?v=8fa4e74c'), cap: 'Образец диплома о профессиональной переподготовке' }
     ],
     license: range('license', 2, 'Выписка из реестра лицензий'),
     calendar: range('calendar', 2, 'Календарный учебный график'),
