@@ -667,3 +667,11 @@ details[open] > summary .plus::after{transform:rotate(0)}
 .src{font-size:13.5px;font-weight:600;color:#4b4870}
 .stat--accent .src{color:rgba(255,255,255,.92)}
 .stat .spark{opacity:1}
+
+/* программа: крупная иллюстрация по центру колонки, с мягким свечением */
+#program .split--top{align-items:center}
+.program__art{position:relative;justify-self:center;width:min(460px,100%);aspect-ratio:1.45;display:grid;place-items:center}
+.program__art::before{content:"";position:absolute;inset:4% 8%;border-radius:50%;background:radial-gradient(circle,rgba(123,109,255,.28),rgba(123,109,255,.08) 55%,transparent 72%);filter:blur(6px)}
+.program__art::after{content:"";position:absolute;inset:0 4%;border-radius:50%;border:1.5px dashed rgba(123,109,255,.28);animation:spin 50s linear infinite}
+.program__art .program__img{position:relative;z-index:1;width:88%;justify-self:center}
+@media (max-width:900px){.program__art{width:min(360px,100%);justify-self:center;margin-top:8px}.program__art .program__img{width:88%}}
