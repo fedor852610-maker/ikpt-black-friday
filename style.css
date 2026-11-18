@@ -651,3 +651,12 @@ details[open] > summary .plus::after{transform:rotate(0)}
   .lb__cap{font-size:14px;padding:0 90px 30px}
   .lb__nav{bottom:calc(18px + env(safe-area-inset-bottom,0px));width:48px;height:48px}
 }
+
+/* бонусные книги: прозрачные, одной высоты, с общей тенью */
+.bonus__books{width:236px;height:150px}
+.bonus__books img{height:136px;width:auto;max-width:none;border-radius:0;box-shadow:none;object-fit:contain;filter:drop-shadow(0 10px 12px rgba(20,10,90,.28))}
+.bonus__books img:nth-child(1){left:0}
+.bonus__books img:nth-child(2){left:66px;height:146px}
+.bonus__books img:nth-child(3){left:128px;height:128px}
+.bonus{grid-template-columns:250px 1fr}
+@media (max-width:640px){.bonus{grid-template-columns:1fr}.bonus__books{margin:0 auto}}
